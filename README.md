@@ -1,1 +1,1 @@
-# HospitalManagement
+# Hospital_Management_static

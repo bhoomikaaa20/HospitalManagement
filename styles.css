@@ -1,0 +1,456 @@
+:root {
+    --color: rgb(95, 204, 212);
+    --primary-color: yellow;
+    --navbar-color: rgb(128, 119, 119);
+    --button-color: linear-gradient(90deg, rgba(30, 190, 182, 1) 0%, rgba(0, 130, 124, 1) 0%);
+    --box-shadow: 0 0 10px rgb(225, 243, 240);
+    --background: #f7f7f7;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+    box-sizing: border-box;
+    transition: all .2s linear;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    overflow: auto;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+header {
+    background-color: var(--color);
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    width: 100%;
+    position: fixed;
+    align-items: center;
+}
+
+header ul {
+    list-style-type: none;
+}
+
+header ul li {
+    display: inline;
+    padding: 20px;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+header a {
+    color: rgb(38, 70, 70);
+}
+
+header .logo {
+    font-size: 25px;
+}
+
+.home {
+    padding: 4rem 10%;
+    width: 100%;
+    background: var(--background);
+}
+
+.main-home {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.main-inner-home {
+    flex: 1 1 45rem;
+}
+
+.main-inner-home .right-content-img img {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.main-inner-home h2 {
+    font-size: 40px;
+    font-weight: 600;
+    padding: 0.5rem 0;
+}
+
+.main-inner-home h1 {
+    font-size: 40px;
+    padding-bottom: 2rem;
+    font-weight: 700;
+}
+
+.main-inner-home p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.back img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.2;
+    padding-top: 100px;
+}
+
+.main-inner-home {
+    padding-top: 10px;
+}
+
+.ripple {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    background-color: var(--color);
+    font-size: 38px;
+    line-height: 100px;
+    text-align: center;
+    font-weight: bold;
+    font-family: arial;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.ripple a {
+    position: relative;
+    color: #0d0d0d;
+}
+
+.ripple:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color);
+    border-radius: 50%;
+    animation: animate 1s linear infinite;
+}
+
+@keyframes animate {
+    100% {
+        transform: scale(1.2);
+        opacity: 0.3;
+    }
+}
+
+/*Services section*/
+.services {
+    padding: 2rem 7%;
+    width: 100%;
+    background-color: var(--background);
+}
+
+.service-heading h1 {
+    text-align: center;
+    font-size: 40px;
+    color: var(--color);
+    padding-bottom: 3rem;
+}
+
+.main-services {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.main-inner-services {
+    flex: 1 1 300px;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border: 2px solid rgb(193, 232, 249);
+}
+
+.main-inner-services .services-img img {
+    width: 100%;
+    box-shadow: var(--box-shadow);
+}
+
+.services-content p {
+    text-align: center;
+    background-color: white;
+    line-height: 2.5rem;
+    padding: 2rem 0;
+    margin-bottom: 1rem;
+}
+
+.services .main-services .main-inner-services h1 {
+    text-align: center;
+}
+
+.services-content a {
+    padding: 1.5rem 3rem;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    color: white;
+    background: var(--button-color);
+    transition: 1s;
+}
+
+.services-content a:hover {
+    border-radius: 0px;
+}
+
+/*Appointment section*/
+.appointment {
+    padding: 2rem 7%;
+}
+
+.heading-appointment {
+    text-align: center;
+}
+
+.heading-appointment h1 {
+    font-size: 40px;
+    padding: 2rem;
+}
+
+.heading-appointment span {
+    color: var(--color);
+}
+
+.main-apointment {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.main-inner-appointment {
+    flex: 1 1 45rem;
+}
+
+.main-inner-appointment img {
+    width: 100%;
+    padding: 4rem;
+}
+
+.right-appointment-content {
+    padding: 0 4rem;
+}
+
+.right-appointment-content h2 {
+    font-size: 25px;
+    padding: 2rem 0;
+}
+
+.right-appointment-content p {
+    font-size: 1.5rem;
+    line-height: 3rem;
+    margin-bottom: 40px;
+}
+
+.right-appointment-content h2 span {
+    color: var(--color);
+}
+
+.right-appointment-content a {
+    padding: 2rem 4rem;
+    background: var(--button-color);
+    color: rgb(27, 20, 20);
+    font-size: 1.5rem;
+    transition: 0.5s;
+}
+
+.right-appointment-content a:hover {
+    border-radius: 15px;
+}
+
+/*our-experts*/
+.our-experts {
+    padding: 3rem 7%;
+    width: 100%;
+}
+
+.expert-heading h1 {
+    font-size: 40px;
+    padding-bottom: 3rem;
+    text-align: center;
+}
+
+.expert-heading h1 span {
+    color: var(--color);
+}
+
+/*swiper styles*/
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 10px;
+}
+
+.swiper-image h2 {
+    font-size: 30px;
+    font-weight: 100;
+    color: var(--color);
+    padding: 1rem 0;
+    padding-top: 2rem;
+}
+
+.social-media {
+    font-size: 22px;
+}
+
+.social-media i {
+    margin: 1rem 1.5rem;
+    background: var(--button-color);
+    color: white;
+    padding: 1rem;
+    font-size: 15px;
+    background-size: 25px;
+    transition: 1s;
+}
+
+.social-media i:hover {
+    transform: rotate(360deg);
+    translate: scale(4rem);
+    font-size: 10px;
+    cursor: pointer;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer {
+    background-color: rgb(67, 118, 118);
+    padding: 70px 0;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #070606;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #054e6b;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+/*responsive*/
+@media (max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header ul li {
+        font-size: 10px;
+        padding: 9px;
+    }
+
+    header .logo {
+        font-size: 15px;
+    }
+
+    .swiper-image h2 {
+        font-size: 10px;
+    }
+}
